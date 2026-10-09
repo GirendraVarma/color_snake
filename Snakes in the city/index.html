@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Snake IO Neon</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- MULTIPLAYER -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- MENU -->
+
+  <div id="menuScreen" class="screen active">
+
+    <h1>🐍 SNAKE IO</h1>
+
+    <input
+      type="text"
+      id="playerName"
+      placeholder="Enter Snake Name"
+      maxlength="12"
+    >
+
+    <button id="startBtn">
+      START GAME
+    </button>
+
+    <div class="info">
+
+      <p>Move with Mouse or Arrow Keys</p>
+
+      <p>Eat Junk Foods 🍔🍕🍟</p>
+
+      <p>Become Rank #1</p>
+
+    </div>
+
+  </div>
+
+  <!-- GAME OVER -->
+
+  <div id="gameOverScreen" class="screen">
+
+    <h1>GAME OVER</h1>
+
+    <h2 id="finalScore">
+      Score: 0
+    </h2>
+
+    <button id="restartBtn">
+      🔄 Restart Game
+    </button>
+
+  </div>
+
+  <!-- HUD -->
+
+  <div id="hud">
+
+    <div class="panel">
+
+      <h3 id="score">
+        Score: 0
+      </h3>
+
+      <h3 id="highScore">
+        High Score: 0
+      </h3>
+
+      <h3 id="rankText">
+        Rank: #1
+      </h3>
+
+    </div>
+
+    <div class="panel">
+
+      <h3>Top 10 Leaderboard</h3>
+
+      <ul id="leaderboard"></ul>
+
+    </div>
+
+  </div>
+
+  <!-- MINIMAP -->
+
+  <canvas id="minimap"></canvas>
+
+  <!-- PAUSE -->
+
+  <button id="pauseBtn">
+    ⏸
+  </button>
+
+  <!-- MOBILE JOYSTICK -->
+
+  <div id="joystickContainer">
+
+    <div id="joystick"></div>
+
+  </div>
+
+  <!-- GAME -->
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
